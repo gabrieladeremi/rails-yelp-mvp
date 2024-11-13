@@ -1,0 +1,11 @@
+<h1>Restaurants</h1>
+<ul class="list-group">
+  <% @restaurants.each do |restaurant| %>
+    <div class="border border-primary rounded m-4">
+      <li class="list-group-item"><%= restaurant.name %></li>
+      <li class="list-group-item"><%= restaurant.address %></li>
+      <li class="list-group-item"><%= restaurant.category %></li>
+    </div>
+  <% end %>
+</ul>
+  <button type="button" class="btn btn-primary m-3">Add Restaurant</button>
