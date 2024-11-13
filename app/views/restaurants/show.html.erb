@@ -1,0 +1,19 @@
+<h1>Show Restaurant</h1>
+<br />
+<div class="m-2 p-2 border border-light-subtle rounded">
+  <p><strong><%=@restaurant.name%></strong></p>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <br />
+  <p class="fs-3">Reviews</p>
+  <% @restaurant.reviews.each do |review| %>
+    <div class="border border-primary rounded p-3 mb-3">
+      <p><%= review.content %></p>
+      <p class="fs-3"><%= '⭐️' * review.rating %></p>
+    </div>
+  <% end %>
+  <br />
+  <%= link_to restaurants_path do%>
+    <button type="button" class="btn btn-primary m-3">Back</button>
+  <% end %>
+</div>
