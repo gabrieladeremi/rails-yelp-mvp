@@ -9,6 +9,10 @@
         <%= link_to  restaurant_path(restaurant) do%>
           <button type="button" class="btn btn btn-outline-info m-3">View</button>
         <% end %>
+
+        <%= link_to  new_restaurant_review_path(restaurant) do%>
+          <button type="button" class="btn btn btn-outline-secondary m-3">Add Review</button>
+        <% end %>
       </div>
     </div>
   <% end %>
